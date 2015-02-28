@@ -9,7 +9,7 @@ div#think_overlay {
 div#think_content {
     display: none; position: fixed;
     width: 70%; height: auto;
-    top: 25%; left: 15%;
+    top: 20%; left: 15%;
     z-index: 1001;
     margin: 0 auto;
     color:white;

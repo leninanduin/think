@@ -23,10 +23,9 @@
     "permissions": [
         "tabs",
         "storage"
-    ]
-    // ,
-    // "icons":{
-    //     "36": "icon-32.png",
-    //     "48": "icon-48.png"
-    // }
+    ],
+    "icons":{
+        "36": "icon_36.png",
+        "48": "icon_48.png"
+    }
 }

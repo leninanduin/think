@@ -60,6 +60,7 @@ function crateModal() {
     console.log('think modal crated');
 }
 crateModal();
+
 // suport for FB
 // FB status box
 $('form[action*="updatestatus"]').find('button[type="submit"]').click(function(e){
@@ -73,35 +74,35 @@ $('form[action*="updatestatus"]').find('button[type="submit"]').click(function(e
 });
 // fb message window
 // TODO: this doesnt work :(
-$(document).on('click', 'button.uiOverlayButton[type="submit"]', function(e){
-    console.log('fb message');
-    console.log(continued);
-    if (!continued) {
-        e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();
-        target = $(this);
-        var i = $(this).index('button.uiOverlayButton[type="submit"]');
-        console.log(i);
-        var t = $('textarea[name="message_body"]').eq(i)[0].value;
-        console.log(t);
+// $(document).on('click', 'button.uiOverlayButton[type="submit"]', function(e){
+//     console.log('fb message');
+//     console.log(continued);
+//     if (!continued) {
+//         e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();
+//         target = $(this);
+//         var i = $(this).index('button.uiOverlayButton[type="submit"]');
+//         console.log(i);
+//         var t = $('textarea[name="message_body"]').eq(i)[0].value;
+//         console.log(t);
 
-        curr_event = 'FB';
-        analyseMessage(t);
-    }
-});
+//         curr_event = 'FB';
+//         analyseMessage(t);
+//     }
+// });
 
 // TODO: this doesnt work :(
 // FB comments box
-$(document).on('submit', 'form.commentable_item', function(e){
-    console.log("coments box")
-    console.log(e);
-    if (!continued) {
-        e.preventDefault();
-        target = $(this);
-        curr_event = 'FB';
+// $(document).on('submit', 'form.commentable_item', function(e){
+//     console.log("coments box")
+//     console.log(e);
+//     if (!continued) {
+//         e.preventDefault();
+//         target = $(this);
+//         curr_event = 'FB';
 
-        analyseMessage($(this).find('.UFIAddCommentInput').text());
-    }
-});
+//         analyseMessage($(this).find('.UFIAddCommentInput').text());
+//     }
+// });
 
 // twitter main box
 $('form.tweet-form').find('button.tweet-btn').click(function(e){
@@ -142,19 +143,19 @@ $('form.usertext').find('button[type="submit"]').click(function(e){
 
 // disqus reply box
 // TODO: doesnt work, it´s an iframe
-$(function(){
-    $('form.reply').find('button').click(function(e){
-        console.log('disqus');
-        console.log(continued);
-        if (!continued) {
-            e.preventDefault(); e.stopPropagation();e.stopImmediatePropagation();
-            var t = $(this).parent('form.reply').find('div.textarea').text();
-            console.log(t)
-            target = $(this);
-            curr_event = 'DISQUS';
-            // analyseMessage(t);
-        }
-    });
-});
+// $(function(){
+//     $('form.reply').find('button').click(function(e){
+//         console.log('disqus');
+//         console.log(continued);
+//         if (!continued) {
+//             e.preventDefault(); e.stopPropagation();e.stopImmediatePropagation();
+//             var t = $(this).parent('form.reply').find('div.textarea').text();
+//             console.log(t)
+//             target = $(this);
+//             curr_event = 'DISQUS';
+//             // analyseMessage(t);
+//         }
+//     });
+// });
 
 

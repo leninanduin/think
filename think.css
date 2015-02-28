@@ -1,37 +1,35 @@
 div#think_overlay {
-    display: none;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: black;
+    display: none; position: fixed;
+    height: 100%; width: 100%;
+    top: 0; left: 0;
+    background: black; opacity: .75;
     z-index: 1000;
-    top: 0;
-    left: 0;
-    opacity: .75;
 }
 
 div#think_content {
-    display: none;
-    border: 1px solid red;
-    width: 70%;
-    height: 60%;
-    top: 20%;
-    left: 15%;
-    position: absolute;
+    display: none; position: fixed;
+    width: 70%; height: auto;
+    top: 25%; left: 15%;
     z-index: 1001;
     margin: 0 auto;
     color:white;
     background: url('chrome-extension://hlkgiadgfpmdomfbopfmppafogbgloik/pic.png') no-repeat;
-    background-size: auto 85%;
-    background-position: 0% 100%;
-    padding-left: 250px;
+    background-size: auto 90%; background-position: 0% 100%;
+    padding-left: 25%;
     box-sizing: border-box;
 }
 
 div#think_content *{
+    text-align: left; font-size: 25px;
+    line-height: normal;
+    margin: 15px 0;
+}
+div#think_content p, div#think_content h1{
     color: white;
-    text-align: left;
-    font-size: 25px;
+}
+
+div#think_content h1 i{
+    font-size: 60px;
 }
 
 #user_message{
@@ -41,9 +39,28 @@ div#think_content *{
 }
 
 #btn_continue{
-    color: green !important;
+    color: red !important;
 }
 
-#btn_continue:hover{
+#btn_cancel{
+    color: #33cc00 !important;
+}
+
+span.think_btn{
+    border: 1px solid;border-radius: 5px;
+    padding: 5px 8px; margin: 0 45px !important;
+    opacity: .75;
+}
+
+span.think_btn:hover{
     cursor: pointer;
+    opacity: 1;
+}
+
+div#think_content p.think-info-quote{
+    color: #66ccff; cursor: pointer;
+}
+
+div#think_content p.think-info-quote i{
+    margin-right: 10px;
 }

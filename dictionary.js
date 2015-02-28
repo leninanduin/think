@@ -1,4 +1,4 @@
 //remove gender teminations
 var dictionary = [
-    "pendej","put","pito","zorra","estupid"
+    "pendej","put","pito","zorra","estupid", "imbecil"
 ]

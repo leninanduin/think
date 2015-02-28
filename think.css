@@ -1,0 +1,49 @@
+div#think_overlay {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    opacity: .75;
+}
+
+div#think_content {
+    display: none;
+    border: 1px solid red;
+    width: 70%;
+    height: 60%;
+    top: 20%;
+    left: 15%;
+    position: absolute;
+    z-index: 1001;
+    margin: 0 auto;
+    color:white;
+    background: url('chrome-extension://hlkgiadgfpmdomfbopfmppafogbgloik/pic.png') no-repeat;
+    background-size: auto 85%;
+    background-position: 0% 100%;
+    padding-left: 250px;
+    box-sizing: border-box;
+}
+
+div#think_content *{
+    color: white;
+    text-align: left;
+    font-size: 25px;
+}
+
+#user_message{
+    font-style: italic;
+    color: orange !important;
+    padding-left: 20px;
+}
+
+#btn_continue{
+    color: green !important;
+}
+
+#btn_continue:hover{
+    cursor: pointer;
+}
